@@ -23,6 +23,7 @@ public class BubbleSortExample {
 		data[y] = temp;
 	}
 	
+	
 	public static void main(String[] args) {
 		System.out.println(bubbleSort(new int[] { 12,3,4,2,4,5,6,7,3,4,6}));
 		

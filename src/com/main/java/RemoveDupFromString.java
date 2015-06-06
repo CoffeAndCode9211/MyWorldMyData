@@ -22,6 +22,7 @@ public class RemoveDupFromString {
 	        if (!seen[ch] && !hasSeen.contains(ch)) {
 	            seen[ch] = true;
 	            sb.append(ch);
+	            hasSeen.add(ch);
 	        }
 	    }
 

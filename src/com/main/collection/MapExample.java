@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class MapExample {
@@ -46,12 +47,21 @@ public class MapExample {
 		while(iterator.hasNext()){
 			System.out.println(iterator.next());
 		}
-		
-		// with key value 
-		for(Map.Entry<String, Integer> kv : map.entrySet()){
-			System.out.println(kv.getKey()+" : "+kv.getValue());
-		}
 		*/
+		// with key value 
+		Iterator<Entry<String, Integer>> kv1 = map.entrySet().iterator();
+
+		for(Map.Entry<String, Integer> kv : map.entrySet()){
+			kv.setValue(123);
+			System.out.println(kv.getKey()+" : "+kv.getValue());
+			
+		}
+		
+		while(kv1.hasNext()){
+			Entry<String, Integer> e = kv1.next();
+			System.out.println(e.getKey()+" : "+e.getValue());
+		}
+		
 		// get common key to two Map objects.
 		Set<String> key1 = new HashSet<>(map.keySet());
 		key1.retainAll(map1.keySet());

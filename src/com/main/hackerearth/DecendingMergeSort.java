@@ -61,6 +61,7 @@ public class DecendingMergeSort {
 		int j = middle + 1;
 		int k = lowerIndex;
 		while (i <= middle && j <= higherIndex) {
+			// change to <= for ascending order
 			if (tempMergArr[i] >= tempMergArr[j]) {
 				array[k] = tempMergArr[i];
 				i++;
@@ -75,6 +76,5 @@ public class DecendingMergeSort {
 			k++;
 			i++;
 		}
-
 	}
 }

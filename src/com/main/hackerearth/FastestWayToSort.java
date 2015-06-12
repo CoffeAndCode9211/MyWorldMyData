@@ -1,15 +1,12 @@
 package com.main.hackerearth;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.Arrays;
 
 public class FastestWayToSort {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 	public static void main(String args[]) throws Exception {
 
@@ -32,8 +29,6 @@ public class FastestWayToSort {
 				sb.append(arr[j]+" ");
 			System.out.println(sb);
 		}
-		bw.flush();
-		bw.close();
 	}
 
 	private static int readInt()throws IOException{		

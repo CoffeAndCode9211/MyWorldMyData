@@ -14,11 +14,7 @@ public class ReadLine {
 			line = line.toUpperCase();
 			int index = line.indexOf('K');
 			//System.out.println(index);
-			
 			char[] data = line.toCharArray();
-			
-			
-			
 			for(int i=index; i < data.length; i++){
 				if(data[i] == 'R'){
 					data[i] = 'K';
@@ -31,7 +27,7 @@ public class ReadLine {
 			noOfTestCase--;
 		}
 	}
-	
+
 	public static int maxR(char[] data, int maxR ){
 		int count = 0;
 		for(int i=0; i < data.length; i++){
@@ -45,5 +41,5 @@ public class ReadLine {
 		//System.out.println(maxR);
 		return maxR;
 	}
-	
+
 }

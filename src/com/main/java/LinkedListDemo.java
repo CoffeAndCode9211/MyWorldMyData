@@ -8,9 +8,6 @@ public class LinkedListDemo {
 		LinkedList ll = new LinkedList();
 		ll.add(1);
 		ll.add(0, "sdfs");
-		
-		
 		System.out.println(ll);
-		
 	}
 }

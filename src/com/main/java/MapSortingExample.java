@@ -1,6 +1,5 @@
 package com.main.java;
 
-
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -11,13 +10,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-/**
- *
- * Java program to demonstrate how to sort Map in Java on key and values.
- * Map can be sort on keys or values.
- *
- * @author Javin Paul
- */
 public class MapSortingExample {
 
   
@@ -25,32 +17,23 @@ public class MapSortingExample {
   
         //creating Hashtable for sorting
         Map<String, Integer> olympic2012 = new HashMap<String, Integer>();
-      
         olympic2012.put("England", 3);
         olympic2012.put("USA", 1);
         olympic2012.put("China", 2);
         olympic2012.put("Russia", 4);
         //olympic2012.put("Australia", 4); //adding duplicate value
-      
         //printing hashtable without sorting
         System.out.println("Unsorted Map in Java : " + olympic2012);
-      
         //sorting Map e.g. HashMap, Hashtable by keys in Java
         Map<String, Integer> sorted = sortByKeys(olympic2012);
         System.out.println("Sorted Map in Java by key: " + sorted);
-      
-      
         //sorting Map like Hashtable and HashMap by values in Java
         sorted = sortByValues(olympic2012);
         System.out.println("Sorted Map in Java by values: " + sorted);
-      
-      
         //Sorting Map in Java by keys using TreeMap
         Map<String, Integer> sortedMapByKeys = new TreeMap<String,Integer>();
         sortedMapByKeys.putAll(olympic2012);
         System.out.println("Sorted Map in Java by key using TreeMap : " + sortedMapByKeys);
- 
-      
         //Sorting Map by keys in Java using Google Collections (Guava)
         //Main benefit is you can specify any ordering like natural or toString or arbitrary
 //        Map<String, Integer> sortingUsingGuava = Maps.newTreeMap(Ordering.natural());

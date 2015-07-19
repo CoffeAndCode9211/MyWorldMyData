@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class PatternMatcher {
 
 	public static void main(String[] args) {
-		String URL = "Hellow this is my worlod";
+		String URL = "Hello this is my world";
 		Pattern pattern = Pattern.compile("o");
 		Matcher matcher = pattern.matcher(URL);
 		if (matcher.find()) {

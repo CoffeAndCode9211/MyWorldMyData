@@ -13,12 +13,12 @@ public class UserNameSortComparable {
 				new UserName("Ashish", "Kumar", 35),
 				new UserName("Dheepan", "Raj", 10),
 				new UserName("Satish", "Gandhi", 26),
-				
+
 		};
-		
+
 		List<UserName> names = Arrays.asList(name);
 		Collections.sort(names);
 		System.out.println(names);
-		
+
 	}
 }

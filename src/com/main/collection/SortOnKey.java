@@ -40,18 +40,18 @@ class SortOnKey {
 
 
 		int sum=0;  int n=123456;    
-		  while(n>9){
-		   int rem;
-		   rem=n%10;
-		   sum=sum+rem;
-		   n=n/10;
-		   if(n<9) {
-		      sum+=n;
-		      n=sum;
-		      sum=0;
-		   }
-		  }
-		  System.out.println(n);
+		while(n>9){
+			int rem;
+			rem=n%10;
+			sum=sum+rem;
+			n=n/10;
+			if(n<9) {
+				sum+=n;
+				n=sum;
+				sum=0;
+			}
+		}
+		System.out.println(n);
 
 
 

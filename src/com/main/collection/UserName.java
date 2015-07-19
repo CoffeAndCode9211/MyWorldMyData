@@ -64,7 +64,7 @@ public class UserName implements Comparable<UserName >{
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
 
-	
+
+
 }

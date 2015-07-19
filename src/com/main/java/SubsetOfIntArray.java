@@ -37,7 +37,7 @@ public class SubsetOfIntArray<E> {
 
 	// Test.
 	public static void main(String[] args) {
-		List<String> set = Arrays.asList("A", "B", "C", "D");
+		List<String> set = Arrays.asList("1", "2", "3", "4");
 		SubsetOfIntArray<String> it = 
 				new SubsetOfIntArray<String>(set);
 		while (it.hasNext()) {

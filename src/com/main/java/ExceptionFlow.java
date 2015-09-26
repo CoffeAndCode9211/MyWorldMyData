@@ -10,23 +10,43 @@ public class ExceptionFlow {
 	 * 
 	 * 
 	 * */
-	
+
 	public static void main(String[] args) {
-		int a =1;
-		try {
-			int b = 10 / a;
-			
+		int a = 0;
+		try{
 			System.out.println(1);
-			return;
-		} catch (Exception e) {
-			e.printStackTrace();
+			int data = 4 /2;
 			System.out.println(2);
-		//	return;
-		}finally{
-			System.out.println(3);
+			try {
+				int b = 10 / a;
+				System.out.println(3);
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.out.println(4);
+				//	return;
+			}finally{
+				System.out.println(5);
+			}
+			System.out.println(6);
+
+
+			int q = 123/0;
+
+			System.out.println(7);
+			a = 0;
+			try{
+				int b = 10 / a;
+				System.out.println(8);
+			}catch(Exception e){
+				e.printStackTrace();
+				return;
+			}finally{
+				System.out.println("Final Finally");
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("main catch");
 		}
-		System.out.println(4);
-		
-		
+
 	}
 }

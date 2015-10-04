@@ -15,20 +15,16 @@ public class UserName implements Comparable<UserName >{
 		this.lastName = lastName;
 		this.age = age;
 	}
-
-	public boolean equals(Object o){
-		if(!(o instanceof UserName))
-			return false;
-		UserName name = (UserName) o;
-		return name.getFirstName().equals(firstName) && name.getLastName().equals(lastName);
+	
+	public UserName(String firstName ,int age) {
+		this.firstName = firstName;
+		this.age = age;
 	}
 
-	public int hashCode() {
-		return 35*firstName.hashCode() + lastName.hashCode();
-	}
+	
 
 	public String toString() {
-		return firstName + " " + lastName+ " "+age;
+		return firstName + " "+age;
 	}
 
 	public int compareTo(UserName u){

@@ -20,26 +20,29 @@ public class UserNameSortComparator {
 			if (dateCmp != 0)
 				return dateCmp;
 
-			return (e1.getUserId() < e2.getUserId() ? -1 :
-				(e1.getUserId() == e2.getUserId() ? 0 : 1));
+			return (e1.getFirstName().compareTo(e2.getFirstName()));
 		}
 	};
 
 	public static void main(String[] args) {
 
 		UserName name[] = {
-				new UserName("Ashish", "Kumar", 10),
-				new UserName("Suman", "Benur", 12),
-				new UserName("Naveen", "Kumar", 12),
-				new UserName("Ashish", "Kumat", 35),
-				new UserName("Dheepan", "Raj", 45),
-				new UserName("Satish", "Gandhi", 55),
+				new UserName("Aashish", 12),
+                new UserName("Suman",  12),
+                new UserName("Naveen", 34),
+                new UserName("Ashish", 10),
+                new UserName("Dheepan", 10),
+                new UserName("Satish",  26)
 
 		};
 
 		List<UserName> names = Arrays.asList(name);
 		Collections.sort(names, AGEORDER);
-		System.out.println(names);
+		System.out.println("AGEORDER => "+names);
+		Collections.sort(names, SENIORITY_ORDER);
+		System.out.println("SENIORITY_ORDER => "+names);
+		Collections.sort(names, new AgeComparator());
+		System.out.println("AgeComparator => "+names);
 	}
 
 

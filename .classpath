@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/twilio-java-sdk-4.5.0.jar" sourcepath="/Users/ashishkumar/.m2/repository/com/twilio/sdk/twilio-java-sdk/4.5.0/twilio-java-sdk-4.5.0-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/httpcore-4.4.3.jar"/>
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/httpclient-4.0-alpha4.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/mysql-connector-java-5.1.17-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

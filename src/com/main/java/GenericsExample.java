@@ -1,7 +1,8 @@
 package com.main.java;
-public class GenericsExample {
-	public static void main(String a[]){
 
+public class GenericsExample {
+
+	public static void main(String a[]){
 		SimpleGeneric<String> sgs = new SimpleGeneric<String>("JAVA2NOVICE");
 		sgs.printType();
 		SimpleGeneric<Boolean> sgb = new SimpleGeneric<Boolean>(Boolean.TRUE);

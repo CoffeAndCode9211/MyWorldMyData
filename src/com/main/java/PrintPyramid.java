@@ -5,7 +5,15 @@ public class PrintPyramid {
 	public static void main(String[] args) {
 		int size = 7;
 		printPyramid(size);
-		System.exit(0);
+		System.out.println();
+		System.out.println();
+		printLeftTriangle(size);
+		System.out.println();
+		System.out.println();
+		printInvertedOddPyramid(size);
+		System.out.println();
+		System.out.println();
+		printRightTriangle(size);
 
 	}
 

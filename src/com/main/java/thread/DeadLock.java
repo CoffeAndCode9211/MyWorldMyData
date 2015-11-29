@@ -1,6 +1,7 @@
 package com.main.java.thread;
 
 public class DeadLock {
+	
 	public static void main(String[] args) {  
 		final String resource1 = "ratan jaiswal";  
 		final String resource2 = "vimal jaiswal";  

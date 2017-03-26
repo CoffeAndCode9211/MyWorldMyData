@@ -43,7 +43,7 @@ public class WriteIFSCToDb {
 
 		statement = connect.createStatement();
 	
-		String query = " insert into BANK_IFSC (BANK_NAME, IFSC, MICR, BRANCH, ADDRESS, CONTACT, CITY, DISTRICT, STATE)"
+		String query = " insert into BANK_IFSC1 (BANK_NAME, IFSC, MICR, BRANCH, ADDRESS, CONTACT, CITY, DISTRICT, STATE)"
 		        + " values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 		

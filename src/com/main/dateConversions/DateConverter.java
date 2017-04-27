@@ -19,6 +19,13 @@ public class DateConverter {
 		return formatter.format(srcDate);
 	}
 
+	public static String convertStringToString(String srcDate) throws ParseException{
+		DateFormat formatter = new SimpleDateFormat("dd/MM/yy");
+		Date datee = formatter.parse(srcDate);
+		DateFormat formatter1 = new SimpleDateFormat("yyyy-MM-dd");
+		return formatter1.format(datee);
+	}
+	
 	public static void main(String[] args) throws ParseException {
 		try{
 			System.out.println(convertStringToDate("12-May-2014 12:30"));
@@ -27,6 +34,8 @@ public class DateConverter {
 			throw pe;
 		}
 	}
+	
+	
 	
 	// Output: 
 	// Mon May 12 12:30:00 IST 2014

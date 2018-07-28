@@ -4,7 +4,10 @@ import java.util.Hashtable;
 
 public class StringEquals {
 	
-	
+	/**
+	 * Explains == and .equals logic and also Hashcode implementation
+	 * @param args
+	 */
 	public static void main(String [] args){ 
 
 		
@@ -74,6 +77,17 @@ public class StringEquals {
         System.out.println(ht);
         //  In the above java program we tried to add two strings objects as keys to the hashtable.
         //  Hashtable put method internally calles equals() method and if its true it wont add.
+        /*
+         
+         When you do contains() it will take the hash code of the element, then look for the bucket where hash code points to. 
+         If more than 1 element is found in the same bucket (multiple objects can have the same hash code), then it uses the equals()
+          method to evaluate if the objects are equal, and then decide if contains() is true or false, or decide if element 
+          could be added in the set or not.
+         
+         
+         
+         
+         */
 		
         System.out.println("**********Hashtable with StringBuffer key**********");
         

@@ -16,8 +16,11 @@ public class FailFastExample {
 
 		while (iterator.hasNext())
 		{
-			System.out.println(premiumPhone.get(iterator.next()));
+			String s = iterator.next();
+			System.out.println("Key: "+s);
+			System.out.println(premiumPhone.get(s));
 			premiumPhone.put("Sony", "Xperia Z");
+			System.out.println("Value Added");
 		}
 
 	}

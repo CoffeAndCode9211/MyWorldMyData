@@ -1,4 +1,4 @@
-package com.main.designPattern;
+package com.main.designPattern.FactoryPattern;
 
 public class Triangle implements Shape{
 

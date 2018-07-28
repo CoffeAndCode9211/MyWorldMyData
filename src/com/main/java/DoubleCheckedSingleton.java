@@ -1,5 +1,7 @@
 package com.main.java;
 
+import com.main.designPattern.Singelton.Singleton;
+
 public class DoubleCheckedSingleton {
 	
 	

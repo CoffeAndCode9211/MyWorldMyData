@@ -1,4 +1,4 @@
-package com.main.java;
+package com.main.designPattern.Singelton;
 
 public class Singleton {
 	
@@ -16,7 +16,7 @@ public class Singleton {
 	      return singleton;
 	   }
 	   /* Other methods protected by singleton-ness */
-	   protected static void demoMethod( ) {
+	   public static void demoMethod( ) {
 	      System.out.println("demoMethod for singleton"); 
 	   }
 }

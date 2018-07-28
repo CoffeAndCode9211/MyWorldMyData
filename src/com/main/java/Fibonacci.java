@@ -1,5 +1,7 @@
 package com.main.java;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Fibonacci {
@@ -7,7 +9,8 @@ public class Fibonacci {
 		int limit = new Scanner(System.in).nextInt();
 		for(int i=1; i <= limit; i++){
 			//System.out.println(fibonacci(i));
-			System.out.println(forLopppFib(i));
+			//System.out.println(forLopppFib(i));
+			System.out.println(fibonacci2(i));
 		}
 		
 	}
@@ -30,6 +33,20 @@ public class Fibonacci {
 			
 		}
 		return c;
+	}
+	
+	private static Map<Integer, Integer> map1 = new HashMap<>();
+
+	private static int fibonacci2(int index) {
+		if (map1.containsKey(index)) {
+			return map1.get(index);
+		}
+		if (index == 1 || index == 2) {
+			map1.put(index, 1);
+		} else {
+			map1.put(index, fibonacci2(index - 1) + fibonacci2(index - 2));
+		}
+		return map1.get(index);
 	}
 	
 	

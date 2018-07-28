@@ -8,5 +8,13 @@
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/httpcore-4.4.3.jar"/>
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/httpclient-4.0-alpha4.jar"/>
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/mysql-connector-java-5.1.17-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/jxl.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/commons-logging-1.1.2.jar"/>
+	<classpathentry kind="lib" path="org.eclipse.jdt.annotation_2.0.100.v20150311-1658.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/jeromq-0.4.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/google-api-services-language-v1-rev391-1.22.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/google-cloud-language-0.24.0-beta.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/google-cloud-core-1.6.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/gson-2.8.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

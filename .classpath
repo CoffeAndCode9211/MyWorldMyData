@@ -12,9 +12,42 @@
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/commons-logging-1.1.2.jar"/>
 	<classpathentry kind="lib" path="org.eclipse.jdt.annotation_2.0.100.v20150311-1658.jar"/>
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/jeromq-0.4.2.jar"/>
-	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/google-api-services-language-v1-rev391-1.22.0.jar"/>
-	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/google-cloud-language-0.24.0-beta.jar"/>
-	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/google-cloud-core-1.6.0.jar"/>
 	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/api-common-1.6.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/error_prone_annotations-2.1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/gax-1.28.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/google-auth-library-credentials-0.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/google-auth-library-oauth2-http-0.9.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/google-cloud-core-1.35.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/google-http-client-1.23.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/google-http-client-jackson2-1.19.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/grpc-auth-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/grpc-core-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/grpc-netty-shaded-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/grpc-protobuf-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/grpc-protobuf-lite-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/grpc-stub-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/gson-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/guava-20.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/httpclient-4.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/httpcore-4.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/jackson-core-2.1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/joda-time-2.9.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/jsr305-3.0.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/opencensus-api-0.11.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/opencensus-contrib-grpc-metrics-0.11.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/proto-google-cloud-language-v1-1.17.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/proto-google-cloud-language-v1beta2-0.18.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/proto-google-common-protos-1.11.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/proto-google-iam-v1-0.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/threetenbp-1.3.3.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/gax-grpc-1.28.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/google-cloud-core-grpc-1.35.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/google-cloud-language-1.35.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/grpc-context-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/protobuf-java-3.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ashishkumar/Documents/jars/googlesentiment/protobuf-java-util-3.5.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

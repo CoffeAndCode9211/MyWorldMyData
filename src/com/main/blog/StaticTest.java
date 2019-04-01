@@ -27,8 +27,8 @@ class Test {
 
 public class StaticTest {
 	public static void main(String args[]) {
-		System.out.println(Test.i);
-		Test t1 = new Test();
-		Test t2 = new Test();
+		//System.out.println(HelloTest.i);
+		HelloTest t1 = new HelloTest();
+		HelloTest t2 = new HelloTest();
 	}
 }

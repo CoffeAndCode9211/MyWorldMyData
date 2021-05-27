@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.main.interview;
 
@@ -9,21 +9,22 @@ package com.main.interview;
  */
 public class InfinityConstructor {
 
-	
-	InfinityConstructor infinityConstructor = new InfinityConstructor();
-	
-	public int show(){
-		return 1;
-	}
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		
-		InfinityConstructor infinityConstructor = new InfinityConstructor();
-		infinityConstructor.show();
 
-	}
+    InfinityConstructor infinityConstructor = new InfinityConstructor();
+
+    public int show() {
+        return 1;
+    }
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+
+        InfinityConstructor infinityConstructor = new InfinityConstructor();
+        infinityConstructor.show();
+
+    }
 
 }
 

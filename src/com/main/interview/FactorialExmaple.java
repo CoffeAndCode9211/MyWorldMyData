@@ -2,22 +2,22 @@ package com.main.interview;
 
 public class FactorialExmaple {
 
-	public static int factorial(int n){
-		int result = 0;
-		if(n <= 0){
-			return 0;
-		}
-		if(n == 1) return 1;
-		System.out.println("Goint to call Factorial function :"+n);
-		result = factorial(n - 1) * n;
-		System.out.println(n+" : "+result);
-		return result;
-	}
-	
-	public static void main(String[] args) {
-		System.out.println("Factorial of 3: "+factorial(12));
-	}
-	
+    public static int factorial(int n) {
+        int result = 0;
+        if (n <= 0) {
+            return 0;
+        }
+        if (n == 1) return 1;
+        System.out.println("Goint to call Factorial function :" + n);
+        result = factorial(n - 1) * n;
+        System.out.println(n + " : " + result);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Factorial of 3: " + factorial(12));
+    }
+
 }
 /*
  When a method calls itself, new local variables and parameters are allocated storage on the stack,

@@ -1,18 +1,18 @@
 package com.main.interview;
 
 public class StaticMethod {
-	
-	public static void show(){
-		System.out.println("This is static method");
-	}
-	
-	public static void main(String[] args) {
-		StaticMethod staticMethod = null;
-		staticMethod.show();
-		StaticMethod.show();
-		
-		
-	}
+
+    public static void show() {
+        System.out.println("This is static method");
+    }
+
+    public static void main(String[] args) {
+        StaticMethod staticMethod = null;
+        staticMethod.show();
+        StaticMethod.show();
+
+
+    }
 }
 
 /*   

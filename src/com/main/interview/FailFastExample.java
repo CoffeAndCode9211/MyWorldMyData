@@ -5,25 +5,23 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class FailFastExample {
-	public static void main(String[] args)
-	{
-		Map<String,String> premiumPhone = new HashMap<String,String>();
-		premiumPhone.put("Apple", "iPhone");
-		premiumPhone.put("HTC", "HTC one");
-		premiumPhone.put("Samsung","S5");
+    public static void main(String[] args) {
+        Map<String, String> premiumPhone = new HashMap<String, String>();
+        premiumPhone.put("Apple", "iPhone");
+        premiumPhone.put("HTC", "HTC one");
+        premiumPhone.put("Samsung", "S5");
 
-		Iterator<String> iterator = premiumPhone.keySet().iterator();
+        Iterator<String> iterator = premiumPhone.keySet().iterator();
 
-		while (iterator.hasNext())
-		{
-			String s = iterator.next();
-			System.out.println("Key: "+s);
-			System.out.println(premiumPhone.get(s));
-			premiumPhone.put("Sony", "Xperia Z");
-			System.out.println("Value Added");
-		}
+        while (iterator.hasNext()) {
+            String s = iterator.next();
+            System.out.println("Key: " + s);
+            System.out.println(premiumPhone.get(s));
+            premiumPhone.put("Sony", "Xperia Z");
+            System.out.println("Value Added");
+        }
 
-	}
+    }
 }
 
 

@@ -7,14 +7,13 @@ import java.time.Period;
 public class CalculateDays {
 
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		LocalDate today = LocalDate.now();
-		LocalDate birthday = LocalDate.of(1988, Month.AUGUST, 27);
-		Period p = Period.between(birthday, today);
-		System.out.println(p.getYears()+"Y " + p.getMonths()+"M "+ p.getDays()+"D");
-	}
-
+        LocalDate today = LocalDate.now();
+        LocalDate birthday = LocalDate.of(1988, Month.AUGUST, 27);
+        Period p = Period.between(birthday, today);
+        System.out.println(p.getYears() + "Y " + p.getMonths() + "M " + p.getDays() + "D");
+    }
 
 
 }

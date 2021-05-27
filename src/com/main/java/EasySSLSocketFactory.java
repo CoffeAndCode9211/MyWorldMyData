@@ -19,38 +19,38 @@ import javax.net.ssl.X509TrustManager;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 
 
-public class EasySSLSocketFactory extends SSLSocketFactory{
-	
-	
-	    SSLContext sslContext = SSLContext.getInstance("TLS");
+public class EasySSLSocketFactory extends SSLSocketFactory {
 
-	    public EasySSLSocketFactory(KeyStore truststore) throws NoSuchAlgorithmException, KeyManagementException, KeyStoreException, UnrecoverableKeyException {
-	        super(truststore);
 
-	        TrustManager tm = new X509TrustManager() {
-	            public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-	            }
+    SSLContext sslContext = SSLContext.getInstance("TLS");
 
-	            public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-	            }
+    public EasySSLSocketFactory(KeyStore truststore) throws NoSuchAlgorithmException, KeyManagementException, KeyStoreException, UnrecoverableKeyException {
+        super(truststore);
 
-	            public X509Certificate[] getAcceptedIssuers() {
-	                return null;
-	            }
-	        };
+        TrustManager tm = new X509TrustManager() {
+            public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+            }
 
-	        sslContext.init(null, new TrustManager[] { tm }, null);
-	    }
+            public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+            }
 
-	    @Override
-	    public Socket createSocket(Socket socket, String host, int port, boolean autoClose) throws IOException, UnknownHostException {
-	        return sslContext.getSocketFactory().createSocket(socket, host, port, autoClose);
-	    }
+            public X509Certificate[] getAcceptedIssuers() {
+                return null;
+            }
+        };
 
-	    @Override
-	    public Socket createSocket() throws IOException {
-	        return sslContext.getSocketFactory().createSocket();
-	    }
+        sslContext.init(null, new TrustManager[]{tm}, null);
+    }
+
+    @Override
+    public Socket createSocket(Socket socket, String host, int port, boolean autoClose) throws IOException, UnknownHostException {
+        return sslContext.getSocketFactory().createSocket(socket, host, port, autoClose);
+    }
+
+    @Override
+    public Socket createSocket() throws IOException {
+        return sslContext.getSocketFactory().createSocket();
+    }
 }
 
 

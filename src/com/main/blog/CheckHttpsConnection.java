@@ -13,18 +13,22 @@ import javax.net.ssl.X509TrustManager;
 
 public class CheckHttpsConnection {
 
-	public static void main(String[] args) throws Exception {
-		TrustManager[] trustAllCerts = new TrustManager[] { 
-            new X509TrustManager() {
-                public X509Certificate[] getAcceptedIssuers() {
-                    X509Certificate[] myTrustedAnchors = new X509Certificate[0];  
-                    return myTrustedAnchors;
+    public static void main(String[] args) throws Exception {
+        TrustManager[] trustAllCerts = new TrustManager[]{
+                new X509TrustManager() {
+                    public X509Certificate[] getAcceptedIssuers() {
+                        X509Certificate[] myTrustedAnchors = new X509Certificate[0];
+                        return myTrustedAnchors;
+                    }
+
+                    @Override
+                    public void checkClientTrusted(X509Certificate[] certs, String authType) {
+                    }
+
+                    @Override
+                    public void checkServerTrusted(X509Certificate[] certs, String authType) {
+                    }
                 }
-                @Override
-                public void checkClientTrusted(X509Certificate[] certs, String authType) {}
-                @Override
-                public void checkServerTrusted(X509Certificate[] certs, String authType) {}
-            }
         };
 
         SSLContext sc = SSLContext.getInstance("SSL");
@@ -39,20 +43,20 @@ public class CheckHttpsConnection {
         };
         // Install the all-trusting host verifier
         HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
-        
-        
+
+
         String urlStr = "https://mytwocents.tech/";
         URL url = new URL(urlStr);
         int responseCode = 0;
-        if(urlStr.contains("https")){
-			HttpsURLConnection connection = (HttpsURLConnection)url.openConnection();
-			connection.setRequestMethod("HEAD");
-			responseCode = connection.getResponseCode();
-		}else{
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection.setRequestMethod("HEAD");
-			responseCode = connection.getResponseCode();
-		}
+        if (urlStr.contains("https")) {
+            HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+            connection.setRequestMethod("HEAD");
+            responseCode = connection.getResponseCode();
+        } else {
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("HEAD");
+            responseCode = connection.getResponseCode();
+        }
         System.out.println(responseCode);
     }
 }

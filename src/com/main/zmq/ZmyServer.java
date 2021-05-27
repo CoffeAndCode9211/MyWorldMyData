@@ -7,20 +7,20 @@ import org.zeromq.ZMQ;
 
 public class ZmyServer {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         ZMQ.Context context = ZMQ.context(1);
         // Socket to talk to clients
         ZMQ.Socket socket = context.socket(ZMQ.REP);
-        socket.bind ("tcp://*:5555");
+        socket.bind("tcp://*:5555");
         try {
-            while (!Thread.currentThread ().isInterrupted ()) {
+            while (!Thread.currentThread().isInterrupted()) {
                 byte[] reply = socket.recv(0);
                 System.out.println("Received Hello");
-                String request = "World" ;
-                socket.send(request.getBytes (), 0);
+                String request = "World";
+                socket.send(request.getBytes(), 0);
                 Thread.sleep(1000); // Do some 'work'
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
@@ -28,7 +28,7 @@ public class ZmyServer {
         }
         socket.close();
         context.term();
- 
+
     }
 
 }

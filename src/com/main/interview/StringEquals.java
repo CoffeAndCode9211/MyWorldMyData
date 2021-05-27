@@ -3,23 +3,24 @@ package com.main.interview;
 import java.util.Hashtable;
 
 public class StringEquals {
-	
-	/**
-	 * Explains == and .equals logic and also Hashcode implementation
-	 * @param args
-	 */
-	public static void main(String [] args){ 
 
-		
-		System.out.println("**********String Equals**********");
-		String fstr= new String("Javatutorials");
-		String sstr= new String("Javatutorials"); 
+    /**
+     * Explains == and .equals logic and also Hashcode implementation
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 
-		System.out.println(fstr.equals(sstr));
-		System.out.println(fstr==sstr);
 
-		System.out.println(fstr.hashCode());
-		System.out.println(sstr.hashCode());
+        System.out.println("**********String Equals**********");
+        String fstr = new String("Javatutorials");
+        String sstr = new String("Javatutorials");
+
+        System.out.println(fstr.equals(sstr));
+        System.out.println(fstr == sstr);
+
+        System.out.println(fstr.hashCode());
+        System.out.println(sstr.hashCode());
 		/*
 		 * 
 		 * Output:
@@ -36,17 +37,17 @@ public class StringEquals {
 			But String class overriding equals() method and in that equals method it comparing content of the strings and returning 
 			true if both are having same content false if not.
 		  */
-		
-		System.out.println("**********StringBuffer Equals**********");
-		
-		StringBuffer aa= new StringBuffer("Javatutorials");
-		StringBuffer bb= new StringBuffer("Javatutorials"); 
-		 
-		System.out.println(aa.equals(bb));
-		System.out.println(aa==bb);
-		 
-		System.out.println(aa.hashCode());
-		System.out.println(bb.hashCode());
+
+        System.out.println("**********StringBuffer Equals**********");
+
+        StringBuffer aa = new StringBuffer("Javatutorials");
+        StringBuffer bb = new StringBuffer("Javatutorials");
+
+        System.out.println(aa.equals(bb));
+        System.out.println(aa == bb);
+
+        System.out.println(aa.hashCode());
+        System.out.println(bb.hashCode());
 		
 		/*
 		 Output:
@@ -65,15 +66,15 @@ public class StringEquals {
 			
 
 		 */
-		
-		System.out.println("**********Hashtable with String key**********");
-		
-		
-		Hashtable<CharSequence, String> ht=new Hashtable<CharSequence, String>();
-		 
+
+        System.out.println("**********Hashtable with String key**********");
+
+
+        Hashtable<CharSequence, String> ht = new Hashtable<CharSequence, String>();
+
         ht.put(fstr, "abc");
         ht.put(sstr, "xyz");
-        
+
         System.out.println(ht);
         //  In the above java program we tried to add two strings objects as keys to the hashtable.
         //  Hashtable put method internally calles equals() method and if its true it wont add.
@@ -88,14 +89,14 @@ public class StringEquals {
          
          
          */
-		
+
         System.out.println("**********Hashtable with StringBuffer key**********");
-        
+
         ht.clear();
         ht.put(aa, "abc");
         ht.put(bb, "xyz");
-        
+
         System.out.println(ht);
-		
-	}
+
+    }
 }

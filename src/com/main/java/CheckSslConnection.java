@@ -27,69 +27,69 @@ import org.apache.http.protocol.HTTP;
 
 public class CheckSslConnection {
 
-	public static void main(String[] args) throws Exception {
-		sendPost();
-	}
-	
-	private static void sendPost() throws Exception {
+    public static void main(String[] args) throws Exception {
+        sendPost();
+    }
 
-		KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
-		trustStore.load(null, null);
-		EasySSLSocketFactory sf = new EasySSLSocketFactory(trustStore);
-		sf.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-		HttpParams params = new BasicHttpParams();
-		HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
-		HttpProtocolParams.setContentCharset(params, HTTP.UTF_8);
-		SchemeRegistry registry = new SchemeRegistry();
-		registry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
-		registry.register(new Scheme("https", sf, 443));
-		ClientConnectionManager cm = new ThreadSafeClientConnManager(params, registry);
+    private static void sendPost() throws Exception {
 
-		String url = "http://demo.ashishkumar.tech/webservice/j_security_check";
+        KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
+        trustStore.load(null, null);
+        EasySSLSocketFactory sf = new EasySSLSocketFactory(trustStore);
+        sf.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+        HttpParams params = new BasicHttpParams();
+        HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
+        HttpProtocolParams.setContentCharset(params, HTTP.UTF_8);
+        SchemeRegistry registry = new SchemeRegistry();
+        registry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
+        registry.register(new Scheme("https", sf, 443));
+        ClientConnectionManager cm = new ThreadSafeClientConnManager(params, registry);
 
-		DefaultHttpClient client = new DefaultHttpClient(cm, params);
-		HttpPost post = new HttpPost(url);
+        String url = "http://demo.ashishkumar.tech/webservice/j_security_check";
 
-		// add header
+        DefaultHttpClient client = new DefaultHttpClient(cm, params);
+        HttpPost post = new HttpPost(url);
+
+        // add header
 //		post.setHeader("User-Agent", s);
 
-		List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
-		//            urlParameters.add(new BasicNameValuePair("sn", "C02G8416DRJM"));
-		//            urlParameters.add(new BasicNameValuePair("cn", ""));
-		//            urlParameters.add(new BasicNameValuePair("locale", ""));
-		//            urlParameters.add(new BasicNameValuePair("caller", ""));
-		//            urlParameters.add(new BasicNameValuePair("num", "12345"));
+        List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
+        //            urlParameters.add(new BasicNameValuePair("sn", "C02G8416DRJM"));
+        //            urlParameters.add(new BasicNameValuePair("cn", ""));
+        //            urlParameters.add(new BasicNameValuePair("locale", ""));
+        //            urlParameters.add(new BasicNameValuePair("caller", ""));
+        //            urlParameters.add(new BasicNameValuePair("num", "12345"));
 
-		urlParameters.add(new BasicNameValuePair("j_username", "admin"));
-		urlParameters.add(new BasicNameValuePair("j_password", "admin"));
+        urlParameters.add(new BasicNameValuePair("j_username", "admin"));
+        urlParameters.add(new BasicNameValuePair("j_password", "admin"));
 
-		post.setEntity(new UrlEncodedFormEntity(urlParameters));
+        post.setEntity(new UrlEncodedFormEntity(urlParameters));
 
-		HttpResponse response = client.execute(post);
-		System.out.println("\nSending 'POST' request to URL : " + url);
-		System.out.println("Post parameters : " + post.getEntity());
-		System.out.println("Response Code : " +
-				response.getStatusLine().getStatusCode());
+        HttpResponse response = client.execute(post);
+        System.out.println("\nSending 'POST' request to URL : " + url);
+        System.out.println("Post parameters : " + post.getEntity());
+        System.out.println("Response Code : " +
+                response.getStatusLine().getStatusCode());
 
-		Header[] headers = response.getAllHeaders();
-		for (Header header : headers) {
-			System.out.println("Key : " + header.getName()
-					+ " ,Value : " + header.getValue());
+        Header[] headers = response.getAllHeaders();
+        for (Header header : headers) {
+            System.out.println("Key : " + header.getName()
+                    + " ,Value : " + header.getValue());
 
-			if(header.getName().equalsIgnoreCase("Set-Cookie")== true){
-				System.out.println("setting session id");
-				//SESSIONID = header.getValue().split(";")[0];
-			}
-		}
-		BufferedReader rd = new BufferedReader(
-				new InputStreamReader(response.getEntity().getContent()));
+            if (header.getName().equalsIgnoreCase("Set-Cookie") == true) {
+                System.out.println("setting session id");
+                //SESSIONID = header.getValue().split(";")[0];
+            }
+        }
+        BufferedReader rd = new BufferedReader(
+                new InputStreamReader(response.getEntity().getContent()));
 
-		StringBuffer result = new StringBuffer();
-		String line = "";
-		while ((line = rd.readLine()) != null) {
-			result.append(line);
-		}
-		System.out.println(result.toString());
-	}
-	
+        StringBuffer result = new StringBuffer();
+        String line = "";
+        while ((line = rd.readLine()) != null) {
+            result.append(line);
+        }
+        System.out.println(result.toString());
+    }
+
 }

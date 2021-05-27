@@ -1,13 +1,11 @@
 package com.main.designPattern.FactoryPattern;
 
-public class Triangle implements Shape{
+public class Triangle implements Shape {
 
-	@Override
-	public void draw() {
-		System.out.println("Inside Triangle::draw() method.");
-	}
+    @Override
+    public void draw() {
+        System.out.println("Inside Triangle::draw() method.");
+    }
 
-	
-	
-	
+
 }

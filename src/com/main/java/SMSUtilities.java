@@ -11,36 +11,33 @@ import com.twilio.sdk.resource.instance.Account;
 
 public class SMSUtilities {
 
-	public static final String FROM_NO = "(480) 696-6916";
-	public static final String ACCOUNT_SID = "AC082b2bfd50f5af12de11f2e4396f1d92";
-	public static final String AUTH_TOKEN = "51386ea15177f8090dbce3d9c6f479a6";
-	String msgout = "";
+    public static final String FROM_NO = "(480) 696-6916";
+    public static final String ACCOUNT_SID = "AC082b2bfd50f5af12de11f2e4396f1d92";
+    public static final String AUTH_TOKEN = "51386ea15177f8090dbce3d9c6f479a6";
+    String msgout = "";
 
-	public static void main(String[] args) {
-		
-		try 
-		{
-			TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
+    public static void main(String[] args) {
 
-			Account mainAccount = client.getAccount();
+        try {
+            TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
 
-			SmsFactory smsFactory = mainAccount.getSmsFactory();
+            Account mainAccount = client.getAccount();
 
-			Map<String, String> smsParams = new HashMap<String, String>();
+            SmsFactory smsFactory = mainAccount.getSmsFactory();
 
-			smsParams.put("To", "+919911499375");
-			smsParams.put("From", FROM_NO);
-			smsParams.put("Body", "Just to test SMS");
+            Map<String, String> smsParams = new HashMap<String, String>();
 
-			smsFactory.create(smsParams);
+            smsParams.put("To", "+919911499375");
+            smsParams.put("From", FROM_NO);
+            smsParams.put("Body", "Just to test SMS");
 
-		} 
-		catch (Exception e) 
-		{
-			e.printStackTrace();
-		}
+            smsFactory.create(smsParams);
 
-	}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 
 

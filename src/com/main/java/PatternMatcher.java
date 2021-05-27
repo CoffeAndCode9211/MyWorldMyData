@@ -5,14 +5,14 @@ import java.util.regex.Pattern;
 
 public class PatternMatcher {
 
-	public static void main(String[] args) {
-		String URL = "Hello this is my world";
-		Pattern pattern = Pattern.compile("o");
-		Matcher matcher = pattern.matcher(URL);
-		if (matcher.find()) {
-		    System.out.println(matcher.group().length()); 
-		} else {
-		    System.out.println("Match not found");
-		}
-	}
+    public static void main(String[] args) {
+        String URL = "Hello this is my world";
+        Pattern pattern = Pattern.compile("o");
+        Matcher matcher = pattern.matcher(URL);
+        if (matcher.find()) {
+            System.out.println(matcher.group().length());
+        } else {
+            System.out.println("Match not found");
+        }
+    }
 }
